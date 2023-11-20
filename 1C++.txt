@@ -1,6 +1,21 @@
 #include <iostream>
 using namespace std;
 
+bool Digits_More_Than_Twice(int Number, int Digit) {
+    int count = 0;
+    while (Number > 0) {
+        int lastDigit = Number % 10;
+        if (lastDigit == Digit) {
+            count++;
+            if (count > 2) {
+                return true;
+            }
+        }
+        Number /= 10;
+    }
+    return false;
+}
+
 int main() {
     int X, A, Command;
 
