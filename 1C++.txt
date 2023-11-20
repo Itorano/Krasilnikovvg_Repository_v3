@@ -1,6 +1,12 @@
 #include <iostream>
 using namespace std;
 
+int Input_Number(int Number) {
+    cout << "1. ¬ведите натуральное число X: ";
+    cin >> Number;
+    return Number;
+}
+
 int main() {
     int X, A, Command;
 
