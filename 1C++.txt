@@ -1,6 +1,12 @@
 #include <iostream>
 using namespace std;
 
+int Input_Digit(int Digit) {
+    cout << "2. Введите цифру A: ";
+    cin >> Digit;
+    return Digit;
+}
+
 int main() {
     int X, A, Command;
 
