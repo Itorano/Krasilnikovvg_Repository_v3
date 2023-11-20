@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
 int Input_Number(int Number) {
     cout << "1. ¬ведите натуральное число X: ";
     cin >> Number;
@@ -12,6 +11,17 @@ int Input_Digit(int Digit) {
     cout << "2. ¬ведите цифру A: ";
     cin >> Digit;
     return Digit;
+}
+
+bool Digit_Presence(int Number, int Digit) {
+    while (Number > 0) {
+        int lastDigit = Number % 10;
+        if (lastDigit == Digit) {
+            return false;
+        }
+        Number /= 10;
+    }
+    return true;
 }
 
 int main() {
