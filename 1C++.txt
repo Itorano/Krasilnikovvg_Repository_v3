@@ -1,10 +1,17 @@
 #include <iostream>
 using namespace std;
 
+
 int Input_Number(int Number) {
     cout << "1. ¬ведите натуральное число X: ";
     cin >> Number;
     return Number;
+}
+
+int Input_Digit(int Digit) {
+    cout << "2. ¬ведите цифру A: ";
+    cin >> Digit;
+    return Digit;
 }
 
 int main() {
