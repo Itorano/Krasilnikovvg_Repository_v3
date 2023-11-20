@@ -1,6 +1,17 @@
 #include <iostream>
 using namespace std;
 
+bool Digit_Presence(int Number, int Digit) {
+    while (Number > 0) {
+        int lastDigit = Number % 10;
+        if (lastDigit == Digit) {
+            return false;
+        }
+        Number /= 10;
+    }
+    return true;
+}
+
 int main() {
     int X, A, Command;
 
