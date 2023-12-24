@@ -3,41 +3,9 @@ using namespace std;
 
 
 int Input_Number(int Number) {
-    cout << "1. Ââåäèòå íàòóğàëüíîå ÷èñëî X: ";
+    cout << "1. Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã Ã²Ã³Ã°Ã Ã«Ã¼Ã­Ã®Ã¥ Ã·Ã¨Ã±Ã«Ã® X: ";
     cin >> Number;
     return Number;
-}
-
-int Input_Digit(int Digit) {
-    cout << "2. Ââåäèòå öèôğó A: ";
-    cin >> Digit;
-    return Digit;
-}
-
-bool Digit_Presence(int Number, int Digit) {
-    while (Number > 0) {
-        int lastDigit = Number % 10;
-        if (lastDigit == Digit) {
-            return false;
-        }
-        Number /= 10;
-    }
-    return true;
-}
-
-bool Digits_More_Than_Twice(int Number, int Digit) {
-    int count = 0;
-    while (Number > 0) {
-        int lastDigit = Number % 10;
-        if (lastDigit == Digit) {
-            count++;
-            if (count > 2) {
-                return true;
-            }
-        }
-        Number /= 10;
-    }
-    return false;
 }
 
 int main() {
@@ -45,7 +13,7 @@ int main() {
 
     do
     {
-        cout << "Ââåäèòå íîìåğ êîìàíäû:";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° ÃªÃ®Ã¬Ã Ã­Ã¤Ã»:";
         cin >> Command;
         
         switch (Command) {
@@ -57,16 +25,16 @@ int main() {
                 break;
             case 3:
                 if (Digit_Presence(X, A)) {
-                    cout << "3. Öèôğà " << A << " îòñóòñòâóåò â ÷èñëå " << X << endl;
+                    cout << "3. Ã–Ã¨Ã´Ã°Ã  " << A << " Ã®Ã²Ã±Ã³Ã²Ã±Ã²Ã¢Ã³Ã¥Ã² Ã¢ Ã·Ã¨Ã±Ã«Ã¥ " << X << endl;
                 } else {
-                    cout << "3. Öèôğà " << A << " ïğèñóòñòâóåò â ÷èñëå " << X << endl;
+                    cout << "3. Ã–Ã¨Ã´Ã°Ã  " << A << " Ã¯Ã°Ã¨Ã±Ã³Ã²Ã±Ã²Ã¢Ã³Ã¥Ã² Ã¢ Ã·Ã¨Ã±Ã«Ã¥ " << X << endl;
                 }
                 break;
             case 4:
                 if (Digits_More_Than_Twice(X, A)) {
-                    cout << "4. Öèôğà " << A << " âñòğå÷àåòñÿ áîëåå äâóõ ğàç â ÷èñëå " << X << endl;
+                    cout << "4. Ã–Ã¨Ã´Ã°Ã  " << A << " Ã¢Ã±Ã²Ã°Ã¥Ã·Ã Ã¥Ã²Ã±Ã¿ Ã¡Ã®Ã«Ã¥Ã¥ Ã¤Ã¢Ã³Ãµ Ã°Ã Ã§ Ã¢ Ã·Ã¨Ã±Ã«Ã¥ " << X << endl;
                 } else {
-                    cout << "4. Öèôğà " << A << " âñòğå÷àåòñÿ íå áîëåå äâóõ ğàç â ÷èñëå " << X << endl;
+                    cout << "4. Ã–Ã¨Ã´Ã°Ã  " << A << " Ã¢Ã±Ã²Ã°Ã¥Ã·Ã Ã¥Ã²Ã±Ã¿ Ã­Ã¥ Ã¡Ã®Ã«Ã¥Ã¥ Ã¤Ã¢Ã³Ãµ Ã°Ã Ã§ Ã¢ Ã·Ã¨Ã±Ã«Ã¥ " << X << endl;
                 }
                 break;
         }
